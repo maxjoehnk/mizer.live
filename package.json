@@ -12,7 +12,7 @@
     "@types/marked": "^3.0.2",
     "@types/node": "^20.0.0",
     "@types/nunjucks": "^3.1.4",
-    "@types/rimraf": "^3.0.0",
+    "@types/rimraf": "^4.0.0",
     "express": "^4.17.1",
     "gray-matter": "^4.0.3",
     "marked": "^3.0.8",
