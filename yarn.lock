@@ -80,14 +80,14 @@
     handlebars "*"
 
 "@types/marked@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-3.0.2.tgz#4a639575542ae7715fabbe450b08118e9093eb35"
-  integrity sha512-mGYI9qFs+i5eYaytWKBbtEMbIkrXGKuhsDpDcj70ogKS2gk1NmgEy9Z3VEKz922Lfms6eITXXqv5idlX7C/irw==
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-3.0.4.tgz#cae501102a540ba1b77e57d0ee3e3d4dab70d08b"
+  integrity sha512-fzrd0O45A0hZl3+Fs3+BcuD3SF+kEkV0KHBXrSPi1B73PnDJI9wcUkpA8JoujFKqgyOijeKgIllFYsgJFhNB5g==
 
 "@types/mime@^1":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@types/mime/-/mime-1.3.2.tgz#93e25bf9ee75fe0fd80b594bc4feb0e862111b5a"
-  integrity sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/@types/mime/-/mime-1.3.5.tgz#1ef302e01cf7d2b5a0fa526790c9123bf1d06690"
+  integrity sha512-/pyBZWSLD2n0dcHE3hq8s8ZvcETHtEuF+3E7XVt0Ig2nvsVQXdghHVcEkIWjy9A0wKfTn97a/PSDYohKIlnP/w==
 
 "@types/minimatch@^5.1.2":
   version "5.1.2"
