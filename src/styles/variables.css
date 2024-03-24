@@ -1,0 +1,23 @@
+:root {
+  --background: #ddd;
+  --font-color: #000;
+  --link-color: rgba(0, 0, 0, 0.54);
+  --primary-color: rgba(0, 0, 0, 0.3);
+  --inactive-tab-background: rgba(0, 0, 0, 0.05);
+  --active-tab-background: #eee;
+  --badge-background: rgba(0, 0, 0, 0.1);
+  --badge-background-hover: rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111;
+    --font-color: #fff;
+    --link-color: rgba(255, 255, 255, 0.54);
+    --primary-color: rgba(0, 0, 0, 0.3);
+    --inactive-tab-background: rgba(0, 0, 0, 0.05);
+    --active-tab-background: #222;
+    --badge-background: rgba(255, 255, 255, 0.1);
+    --badge-background-hover: rgba(255, 255, 255, 0.2);
+  }
+}

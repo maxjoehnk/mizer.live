@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+  color: var(--font-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link {
+  color: var(--link-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.body {
+  background: var(--background);
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 16px;
+}
