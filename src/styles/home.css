@@ -112,3 +112,15 @@
 .feature__image:hover img {
     transform: scale(3);
 }
+
+@media (max-width: 600px) {
+    .home__highlights {
+        justify-content: center;
+    }
+
+    .feature__item,
+    .feature__item--odd {
+        grid-template-areas: 'image' 'title' 'description';
+        grid-template-columns: 1fr;
+    }
+}
