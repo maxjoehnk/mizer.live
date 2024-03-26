@@ -9,7 +9,6 @@
     "@parcel/watcher": "^2.0.0-alpha.10",
     "@types/express": "^4.17.12",
     "@types/handlebars": "^4.1.0",
-    "@types/marked": "^3.0.2",
     "@types/node": "^15.6.2",
     "@types/nunjucks": "^3.1.4",
     "@types/rimraf": "^3.0.0",
