@@ -9,13 +9,15 @@
         <p class="home__description">
             A visualization software for live events like concerts and club gigs with a node based workflow.
         </p>
-        <img src="/assets/images/main.png" width="100%"/>
+        <img src="/assets/images/layout.png" width="100%"/>
     </div>
     <h2 class="home__subtitle">Highlights</h2>
     <div class="home__highlights">
         {% for highlight in highlights %}
         <div class="highlight__item">
-            <img src="{{ highlight.image }}" class="highlight__image" alt="{{ highlight.title }}"/>
+            <div class="highlight__image">
+                <img src="{{ highlight.image }}" alt="{{ highlight.title }}"/>
+            </div>
             <p class="highlight__title">{{ highlight.title }}</p>
         </div>
         {% endfor %}
@@ -24,7 +26,9 @@
     <div class="home__features">
         {% for feature in features %}
         <div class="feature__item {% if loop.index % 2 == 0 %}feature__item--odd{% endif %}">
-            <img src="{{ feature.image }}" class="feature__image" alt="{{ feature.title }}"/>
+            <div class="feature__image">
+                <img src="{{ feature.image }}" alt="{{ feature.title }}"/>
+            </div>
             <p class="feature__title">{{ feature.title }}</p>
             <p class="feature__description">{{ feature.description }}</p>
         </div>
