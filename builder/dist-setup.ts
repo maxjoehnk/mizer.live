@@ -1,10 +1,8 @@
 import { promises as fs } from 'fs';
-import { promisify } from 'util';
-import * as rimraf from 'rimraf';
+import { rimraf } from 'rimraf';
 import { fromRoot } from './fs';
 
-const cleanDir = promisify(rimraf);
-const cleanDist = () => cleanDir(fromRoot('dist'));
+const cleanDist = () => rimraf(fromRoot('dist'));
 
 const createDistDir = (path: string) => fs.mkdir(fromRoot(`dist/${path}`), { recursive: true });
 
