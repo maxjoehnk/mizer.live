@@ -8,7 +8,7 @@ import { Page } from '../page';
 export const generateHomepage: GeneratorStep = async () => {
   const markdownPath = fromSource('home.md')
   const frontMatter = await read(markdownPath)
-  const res = await renderAsync('pages/home.html', {
+  const res = await renderAsync('templates/home.html', {
     page: Page.Home,
     ...frontMatter.data,
   });

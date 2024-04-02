@@ -4,11 +4,13 @@ import { copyAssets } from './steps/copy-assets-step';
 import { createDist } from './dist-setup';
 import { generateHomepage } from './steps/homepage-step';
 import { combineStyles } from './steps/combine-styles-step';
+import {generateMarkdownPages} from "./steps/markdown-page-step";
 
 const steps: GeneratorStep[] = [
   compileScripts,
   combineStyles,
   generateHomepage,
+  generateMarkdownPages,
   copyAssets,
 ]
 
