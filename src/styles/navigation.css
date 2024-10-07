@@ -60,7 +60,7 @@
 
 .navigation__download-btn svg {
   width: 16px;
-  color: white;
+  color: var(--btn-font-color);
 }
 
 .navigation__download-btn {
@@ -71,4 +71,5 @@
   border-radius: 20px;
   height: 40px;
   background: black;
+  color: var(--btn-font-color);
 }

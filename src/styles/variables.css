@@ -7,6 +7,7 @@
   --active-tab-background: #eee;
   --badge-background: rgba(0, 0, 0, 0.1);
   --badge-background-hover: rgba(0, 0, 0, 0.2);
+  --btn-font-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,5 +20,6 @@
     --active-tab-background: #222;
     --badge-background: rgba(255, 255, 255, 0.1);
     --badge-background-hover: rgba(255, 255, 255, 0.2);
+    --btn-font-color: #fff;
   }
 }
