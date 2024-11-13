@@ -85,11 +85,14 @@
     grid-area: image;
     overflow: visible;
     margin: 0 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .feature__image img {
     max-width: 100%;
-    max-height: 400px;
+    max-height: 300px;
     transition: transform 0.3s;
     border-radius: 4px;
 }

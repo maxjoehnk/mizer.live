@@ -22,4 +22,7 @@ features:
   - title: "Sequencer"
     description: "Sequencer for step based fixture control."
     image: "/assets/images/sequencer.png"
+  - title: "Companion App"
+    description: "Use the mobile companion app to patch and test your fixtures on stage"
+    image: "/assets/images/mobile.png"
 ---
