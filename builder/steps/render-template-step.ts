@@ -4,7 +4,7 @@ import markdownFilter from '../template-filters/markdown';
 import { Page } from '../page';
 import { slugify } from '../slugify';
 
-const templateEnvironment = new Environment(new FileSystemLoader(fromRoot('src'), { noCache: true }), { autoescape: false })
+export const templateEnvironment = new Environment(new FileSystemLoader(fromRoot('src'), { noCache: true }), { autoescape: false })
 templateEnvironment.addFilter('markdown', markdownFilter)
 templateEnvironment.addFilter('slug', slugify)
 

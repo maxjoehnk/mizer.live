@@ -1,10 +1,12 @@
-import { compileScripts } from './steps/compile-scripts-step';
-import { GeneratorStep } from './step';
-import { copyAssets } from './steps/copy-assets-step';
-import { createDist } from './dist-setup';
-import { generateHomepage } from './steps/homepage-step';
-import { combineStyles } from './steps/combine-styles-step';
+import {compileScripts} from './steps/compile-scripts-step';
+import {GeneratorStep} from './step';
+import {copyAssets} from './steps/copy-assets-step';
+import {createDist} from './dist-setup';
+import {generateHomepage} from './steps/homepage-step';
+import {combineStyles} from './steps/combine-styles-step';
 import {generateMarkdownPages} from "./steps/markdown-page-step";
+import {generateFavicons} from "./steps/favicons";
+import {templateEnvironment} from "./steps/render-template-step";
 
 const steps: GeneratorStep[] = [
   compileScripts,
@@ -17,9 +19,11 @@ const steps: GeneratorStep[] = [
 export async function generate() {
   console.log('Building project...');
   const time = await stopwatch(async () => {
-    const [_, projects] = await Promise.all([
+    await Promise.all([
       createDist(),
-    ])
+    ]);
+    const faviconsHtml = await generateFavicons();
+    templateEnvironment.addGlobal('favicons', faviconsHtml);
     await Promise.all(
       steps.map(step => step()),
     );
