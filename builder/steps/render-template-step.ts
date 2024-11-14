@@ -12,6 +12,7 @@ function enhanceContext(context = {}) {
   return {
     ...context, pages: {
       [Page.Home]: '/',
+      [Page.Downloads]: '/downloads',
     }
   };
 }

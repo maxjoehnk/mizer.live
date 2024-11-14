@@ -1,0 +1,50 @@
+{% extends "partials/page.html" %}
+{% block head %}
+<title>Mizer - Downloads</title>
+{% endblock %}
+{% block content %}
+<div class="markdown-page">
+    <h2>Downloads</h2>
+
+    <dl class="release__list">
+        <h3>Development Build</h3>
+
+        <div class="release__entry">
+            <dt>Linux</dt>
+
+            <dd>
+                <a href="https://downloads.mizer.live/linux/amd64/latest/mizer.zip" class="navigation__download-btn">.zip</a>
+                <a href="https://downloads.mizer.live/linux/amd64/latest/mizer.flatpak"
+                   class="navigation__download-btn">Flatpak</a>
+                <a href="https://downloads.mizer.live/linux/amd64/latest/headless.zip"
+                   class="navigation__download-btn">Headless</a>
+            </dd>
+        </div>
+        <div class="release__entry">
+            <dt>MacOS</dt>
+            <dd>
+                <a href="https://downloads.mizer.live/macos/arm/latest/Mizer.dmg" class="navigation__download-btn">.dmg</a>
+            </dd>
+        </div>
+        <div class="release__entry">
+            <dt>Windows</dt>
+            <dd>
+                <a href="https://downloads.mizer.live/windows/amd64/latest/mizer.zip" class="navigation__download-btn">.zip</a>
+            </dd>
+        </div>
+    </dl>
+
+    <dl class="release__list">
+        <h3>Mobile Companion</h3>
+
+        <div class="release__entry">
+            <dt>Android</dt>
+            <dd>
+                <a href="https://play.google.com/store/apps/details?id=me.maxjoehnk.mizer" class="navigation__download-btn">
+                    <!--                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><title>google-play</title><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" /></svg>-->
+                    Play Store</a>
+            </dd>
+        </div>
+    </dl>
+</div>
+{% endblock %}

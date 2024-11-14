@@ -7,12 +7,14 @@ import {combineStyles} from './steps/combine-styles-step';
 import {generateMarkdownPages} from "./steps/markdown-page-step";
 import {generateFavicons} from "./steps/favicons";
 import {templateEnvironment} from "./steps/render-template-step";
+import {generateDownloads} from "./steps/downloads-page-step";
 
 const steps: GeneratorStep[] = [
   compileScripts,
   combineStyles,
   generateHomepage,
   generateMarkdownPages,
+  generateDownloads,
   copyAssets,
 ]
 

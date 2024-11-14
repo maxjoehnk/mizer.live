@@ -1,3 +1,4 @@
 export enum Page {
-  Home = 'home'
+  Home = 'home',
+  Downloads = 'downloads',
 }
