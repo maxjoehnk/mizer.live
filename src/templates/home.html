@@ -1,6 +1,7 @@
 {% extends "partials/page.html" %}
 {% block head %}
 <title>Mizer</title>
+<meta property="og:title" content="Mizer - free node-based lighting software">
 {% endblock %}
 {% block navigation %}
 <div class="navigation">
@@ -26,16 +27,17 @@
         </p>
         <img src="/assets/images/layout.png" width="100%"/>
     </div>
-    <h2 class="home__subtitle">Highlights</h2>
-    <div class="home__highlights">
-        {% for highlight in highlights %}
-        <div class="highlight__item">
-            <div class="highlight__image">
-                <img src="{{ highlight.image }}" alt="{{ highlight.title }}"/>
+    <div class="highlight-container">
+        <h2 class="home__subtitle">Highlights</h2>
+        <div class="home__highlights">
+            {% for highlight in highlights %}
+            <div class="highlight__item">
+                <img src="{{ highlight.icon }}" alt="{{ highlight.title }}" />
+                <p class="highlight__title">{{ highlight.title }}</p>
+                <p class="highlight__description">{{ highlight.description }}</p>
             </div>
-            <p class="highlight__title">{{ highlight.title }}</p>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
     <h2 class="home__subtitle">Features</h2>
     <div class="home__features">

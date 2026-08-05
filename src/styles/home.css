@@ -1,7 +1,7 @@
 .home {
     display: flex;
     flex-direction: column;
-    gap: 128px;
+    gap: 64px;
 }
 
 .home__title {
@@ -32,29 +32,46 @@
 }
 
 .home__highlights {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(256px, 1fr));
     gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.highlight__image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 10px rgba(0, 0, 0, 0.1) solid;
-    overflow: hidden;
+.highlight-container {
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    padding: 64px;
 }
 
-.highlight__image img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    transition: transform 0.3s;
+.highlight__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.highlight__item img {
+    color: black;
+    width: 96px;
+    height: 96px;
+    filter: invert();
 }
 
 .highlight__title {
     font-size: 1.5rem;
+    max-width: 300px;
+    text-align: center;
+    padding-bottom: 16px;
+    height: 4.5rem;
+}
+
+.highlight__description {
+    font-size: 1.0rem;
     max-width: 300px;
     text-align: center;
 }
@@ -63,7 +80,8 @@
     display: flex;
     flex-direction: column;
     gap: 64px;
-    margin-bottom: 32px;
+    max-width: 1000px;
+    margin: 32px auto;
 }
 
 .feature__item {
@@ -73,13 +91,11 @@
     gap: 32px;
     align-items: start;
     grid-template-areas: 'image title' 'image description';
-
 }
 
 .feature__item--odd {
     grid-template-areas: 'title image' 'description image';
 }
-
 
 .feature__image {
     grid-area: image;
@@ -108,17 +124,11 @@
     text-align: center;
 }
 
-.highlight__image:hover img {
-    transform: scale(2);
-}
-
-.feature__image:hover img {
-    transform: scale(3);
-}
-
 @media (max-width: 600px) {
     .home__highlights {
         justify-content: center;
+        grid-template-columns: 1fr;
+        grid-gap: 64px;
     }
 
     .feature__item,
