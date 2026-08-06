@@ -47,7 +47,7 @@
             <p class="home__description">
                 A node-based lighting control software
             </p>
-            <img class="home__application-preview" src="/assets/images/layout.png" width="100%"/>
+            <img class="home__application-preview" src="/assets/images/layout.png" width="100%" loading="eager"/>
         </div>
     </div>
     <div class="highlight-container">
@@ -67,7 +67,7 @@
         {% for feature in features %}
         <div class="feature__item {% if loop.index % 2 == 0 %}feature__item--odd{% endif %}">
             <div class="feature__image">
-                <img src="{{ feature.image }}" alt="{{ feature.title }}"/>
+                <img src="{{ feature.image }}" alt="{{ feature.title }}" loading="lazy"/>
             </div>
             <p class="feature__title">{{ feature.title }}</p>
             <p class="feature__description">{{ feature.description }}</p>
