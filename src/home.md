@@ -1,4 +1,9 @@
 ---
+carousel:
+  - image: /assets/images/live/shot-2.webp
+  - image: /assets/images/live/shot-3.webp
+  - image: /assets/images/live/shot-4.webp
+  - image: /assets/images/live/shot-1.webp
 highlights:
   - title: "Node Workflow"
     description: Control fixtures using a wide variety of nodes to create any effect you can imagine.

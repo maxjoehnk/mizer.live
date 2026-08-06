@@ -2,6 +2,20 @@
 {% block head %}
 <title>Mizer</title>
 <meta property="og:title" content="Mizer - free node-based lighting software">
+{% set slide_count = carousel | length %}
+<style>
+    @keyframes home__carousel-autoplay {
+    {%- for carousel_item in carousel %}
+        {{ (loop.index0 * 100 / slide_count) | round(4) }}%,
+        {{ ((loop.index0 * 100 + 80) / slide_count) | round(4) }}% {
+            transform: translateX(calc(-100% * {{ loop.index0 }}));
+        }
+    {%- endfor %}
+        100% {
+            transform: translateX(calc(-100% * {{ slide_count }}));
+        }
+    }
+</style>
 {% endblock %}
 {% block navigation %}
 <div class="navigation">
@@ -21,11 +35,20 @@
 {% block content %}
 <div class="home">
     <div class="home__main-catch">
-        <h1 class="home__title">Mizer</h1>
-        <p class="home__description">
-            A node-based lighting control software
-        </p>
-        <img src="/assets/images/layout.png" width="100%"/>
+        <div class="home__carousel" style="--carousel-slide-count: {{ carousel | length }}">
+            {% for carousel_item in carousel %}
+            <img src="{{ carousel_item.image }}" alt="{{ carousel_item.title }}" />
+            {% endfor %}
+            {# duplicate of the first slide, so the animation can loop without a visible rewind #}
+            <img src="{{ carousel[0].image }}" alt="" aria-hidden="true" />
+        </div>
+        <div class="home__slide-overlay">
+            <h1 class="home__title">Mizer</h1>
+            <p class="home__description">
+                A node-based lighting control software
+            </p>
+            <img class="home__application-preview" src="/assets/images/layout.png" width="100%"/>
+        </div>
     </div>
     <div class="highlight-container">
         <h2 class="home__subtitle">Highlights</h2>
